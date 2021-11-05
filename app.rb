@@ -1,11 +1,11 @@
 require 'sinatra/base'
 require './lib/player.rb'
-# require 'sinatra/reloader'
+require 'sinatra/reloader'
 
 
 class Battle < Sinatra::Base
   configure :development do
-    # register Sinatra::Reloader
+    register Sinatra::Reloader
   end
 
   get '/' do
@@ -22,6 +22,12 @@ class Battle < Sinatra::Base
     @player_1 = $player_1.name
     @player_2 = $player_2.name
     erb(:play)
+  end
+
+  get '/attack' do
+    @player_1 = $player_1.name
+    @player_2 = $player_2.name
+    erb(:attack)
   end
 
   # start the server if ruby file executed directly

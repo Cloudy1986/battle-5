@@ -1,8 +1,7 @@
 <h1> <%= @player_1 %> vs. <%= @player_2 %> </h1>
 
-<p>
-<%= @player_2 %> hit points - 10
+<%= @player_2 %>: 100 hit points 
 
-<p>
-<%= @player_1 %> has attacked <%= @player_2 %>
-<p>
+<form action="/attack">
+  <input type="submit" value="Attack">
+</form>
