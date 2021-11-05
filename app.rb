@@ -2,7 +2,6 @@ require 'sinatra/base'
 require './lib/player.rb'
 require 'sinatra/reloader'
 
-
 class Battle < Sinatra::Base
   configure :development do
     register Sinatra::Reloader
