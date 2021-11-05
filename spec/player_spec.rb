@@ -16,7 +16,7 @@ describe Player do
     end
   end
 
-  describe 'attack' do
+  describe '#attack' do
     it 'damages the player' do
       expect(computer).to receive(:receive_damage)
       mark.attack(computer)
