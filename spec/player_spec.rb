@@ -16,13 +16,6 @@ describe Player do
     end
   end
 
-  describe '#attack' do
-    it 'damages the player' do
-      expect(computer).to receive(:receive_damage)
-      mark.attack(computer)
-    end
-  end
-
   describe '#receive_damage' do
     it 'reduces the player hit points' do
       expect { computer.receive_damage }.to change { computer.hit_points }.by(-10)
